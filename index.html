@@ -1,55 +1,122 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="zh-TW">
 <head>
-    <title>國靖幫幫忙</title>
-    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國靖金屬 Kuoching Metal | 專業金屬帷幕牆板製造</title>
+    <meta name="description" content="國靖金屬成立於1986年，專注於金屬帷幕牆板、琺瑯牆板加工製造。擁有30年經驗，服務項目包含鋁板、不鏽鋼板、鍍鋅鋼板加工。">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div id="loading">載入中...</div>
-    <script>
-        liff.init({
-            liffId: "2006735084-1kOjvl89" // LIFF ID
-        }).then(() => {
 
-            if (!liff.isLoggedIn()) {
-                liff.login();
-            } else {
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">國靖金屬 KUOCHING</a>
+            <ul class="nav-links">
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#services">專業服務</a></li>
+                <li><a href="#portfolio">工程實績</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
 
-                liff.getProfile().then(profile => {
+    <header class="hero">
+        <div class="hero-content">
+            <h1>專注金屬帷幕工藝<br>成就建築永恆價值</h1>
+            <p>30+ 年經驗 ｜ 12,000㎡ 月產能 ｜ 500+ 指標專案</p>
+            <a href="#contact" class="btn">立即諮詢</a>
+        </div>
+    </header>
 
-                    (function (lt) {
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">關於國靖</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>務實為本，深耕台灣三十載</h3>
+                    <p>國靖金屬成立於 1986 年，座落於新竹縣湖口鄉。我們專注於建築用金屬帷幕牆板之加工製造，致力於協助工程單位降低加工與交期風險。</p>
+                    <p>我們堅持「生產與品檢獨立管理」，確保每一件出廠的產品都符合最高標準。從台北101到台積電廠房，國靖一直是業界最值得信賴的合作夥伴。</p>
+                    <ul class="features-list">
+                        <li>✅ <strong>自有廠房：</strong>多樓層作業配置，產能穩定。</li>
+                        <li>✅ <strong>數位製程：</strong>導入自動化與數據分析，精準控管交期。</li>
+                        <li>✅ <strong>特殊工藝：</strong>具備琺瑯牆板與複合板高階加工能力。</li>
+                    </ul>
+                </div>
+                <div class="about-img">
+                    <div class="img-placeholder">廠房/公司形象照片</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        const urlObj = new URL(lt);
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">專業服務與產能</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>金屬帷幕加工</h3>
+                    <p>提供鋁單板、鍍鋅鋼板、不鏽鋼板之精密鈑金加工。月產能達 12,000 平方公尺。</p>
+                </div>
+                <div class="service-card highlight">
+                    <h3>琺瑯牆板應用</h3>
+                    <p>專精於高耐久、防火、易清潔的琺瑯牆板加工，適用於捷運、隧道及公共建設。</p>
+                </div>
+                <div class="service-card">
+                    <h3>客製化模組</h3>
+                    <p>針對特殊造型與結構需求，提供蜂巢板、鋁複合板等客製化解決方案。</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        // 取得 URL 參數
-                        const params = urlObj.searchParams;
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2 class="section-title">指標工程實績</h2>
+            <p class="section-subtitle">我們參與了台灣眾多地標性建築的建設</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h4>台北 101 大樓</h4>
+                    <p>全球指標性摩天大樓帷幕工程</p>
+                </div>
+                <div class="portfolio-item">
+                    <h4>台灣積體電路 (TSMC)</h4>
+                    <p>高科技廠辦大樓外牆工程</p>
+                </div>
+                <div class="portfolio-item">
+                    <h4>台灣高鐵 / 機場捷運</h4>
+                    <p>多個車站站體金屬裝修工程</p>
+                </div>
+                <div class="portfolio-item">
+                    <h4>南港展覽館</h4>
+                    <p>大型公共展演空間外牆</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        // 取得USERID跟DISPLAYNAME參數的值
-                        const ragicPath = params.get('ragicpath');
-                        const userId = params.get('userid');
-                        const displayName = params.get('displayname');
+    <section id="contact" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title text-white">聯絡我們</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p>有任何金屬加工需求，歡迎聯繫我們。</p>
+                    <br>
+                    <p><strong>地址：</strong> 新竹縣湖口鄉 (詳細地址請補上)</p>
+                    <p><strong>電話：</strong> (請補上電話)</p>
+                    <p><strong>Email：</strong> (請補上 Email)</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        let a = `https://ap7.ragic.com/kuochingmetal/${ragicPath}?webview&webaction=form&ver=new&version=2`;
-                        userId && (a += `&pfv${userId}=${encodeURIComponent(profile.userId)}`);
-                        displayName && (a += `&pfv${displayName}=${encodeURIComponent(profile.displayName)}`);
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 國靖金屬 Kuoching Metal. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-                        //alert(a);
-
-                        lt.replace(a);
-                    })(window.location);
-
-                }).catch((err) => {
-                    console.error('取得使用者資訊失敗:', err);
-                    alert('取得使用者資訊失敗，請稍後再試。');
-                });
-            }
-
-        }).catch((err) => {
-            console.error('LIFF 初始化失敗:', err);
-            alert('LIFF 初始化失敗，請確認 LIFF ID 是否正確。');
-        });
-    </script>
 </body>
-
 </html>
