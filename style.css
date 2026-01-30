@@ -342,5 +342,23 @@ footer {
     font-weight: bold;
 }
 
+/* --- 修正：將聯絡我們改為亮色系 --- */
+#contact {
+    background-color: #ffffff !important; /* 強制背景變全白 */
+    color: #333333 !important;            /* 強制文字變深灰 */
+    border-top: 5px solid #003366;        /* 上方加一條藍色裝飾線，增加層次感 */
+}
+
+/* 修正標題顏色，確保在白底上看得到 */
+#contact .section-title {
+    color: #003366 !important;            /* 標題改回品牌深藍色 */
+    text-shadow: none !important;         /* 移除任何可能的陰影 */
+}
+
+/* 確保地址、電話等文字清楚 */
+#contact p {
+    font-size: 1.1rem;                    /* 文字稍微放大一點 */
+    font-weight: 500;                     /* 字體加粗一點 */
+}
 
 
