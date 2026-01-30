@@ -1,0 +1,226 @@
+/* 全域設定 */
+:root {
+    --primary-color: #003366; /* 穩重的深藍色 */
+    --accent-color: #C00000;  /* 強調色 */
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+    --dark-bg: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 導覽列 */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 90vh; /* 佔滿螢幕高度的 90% */
+    background: linear-gradient(rgba(0,51,102,0.8), rgba(0,51,102,0.6)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 70px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--accent-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #a00000;
+}
+
+/* 通用區塊設定 */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    color: #666;
+}
+
+.bg-light { background: var(--light-bg); }
+.bg-dark { background: var(--dark-bg); color: #fff; }
+
+/* 關於我們 */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 300px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 8px;
+}
+
+/* 服務卡片 */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* 實績卡片 */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: #fff;
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* 手機版調整 */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+    .nav-links {
+        margin-top: 10px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
