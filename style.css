@@ -52,10 +52,14 @@ ul {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    letter-spacing: 1px;
+    display: flex;       /* 讓圖片垂直置中 */
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;       /* 設定高度，避免撐開導覽列 (導覽列總高是 70px) */
+    width: auto;        /* 寬度自動調整，保持比例 */
+    object-fit: contain;
 }
 
 .nav-links {
@@ -325,3 +329,4 @@ footer {
     color: var(--accent-color);
     font-weight: bold;
 }
+
