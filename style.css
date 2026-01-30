@@ -223,4 +223,105 @@ footer {
     .about-grid {
         grid-template-columns: 1fr;
     }
+
+}
+/* --- 以下是新增的 Portfolio 頁面樣式 --- */
+
+/* 內頁 Header */
+.page-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 100px 0 60px; /* 上方留白給導覽列 */
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* 分類按鈕 */
+.portfolio-filter {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 0 5px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* 圖片網格系統 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自動排版 */
+    gap: 30px;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* 滑鼠移過去會浮起來 */
+}
+
+.gallery-img {
+    height: 250px;
+    background-color: #eee; /* 圖片還沒放進去時的底色 */
+    overflow: hidden;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 讓圖片填滿格子不變形 */
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover .gallery-img img {
+    transform: scale(1.05); /* 圖片微放大特效 */
+}
+
+.gallery-info {
+    padding: 20px;
+}
+
+.gallery-info h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.gallery-info .category {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.gallery-info .desc {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* 導覽列 Active 狀態 */
+.nav-links a.active {
+    color: var(--accent-color);
+    font-weight: bold;
 }
