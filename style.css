@@ -52,13 +52,13 @@ ul {
 }
 
 .logo {
-    display: flex;       /* 讓圖片垂直置中 */
+    display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 50px;       /* 設定高度，避免撐開導覽列 (導覽列總高是 70px) */
-    width: auto;        /* 寬度自動調整，保持比例 */
+    height: 50px;       /* 固定高度 50px (導覽列高 70px，這樣會留白邊) */
+    width: auto;        /* 寬度自動，保持圖片比例 */
     object-fit: contain;
 }
 
@@ -329,4 +329,5 @@ footer {
     color: var(--accent-color);
     font-weight: bold;
 }
+
 
