@@ -49,17 +49,22 @@ ul {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    padding: 0 20px;     /* 左右留一點緩衝空間 */
+    flex-wrap: nowrap;   /* [新增] 禁止換行，這是防跑版的關鍵 */
 }
 
 .logo {
     display: flex;
     align-items: center;
+    height: 100%;        /* 跟隨導覽列高度 */
+    text-decoration: none; /* 移除超連結底線 */
 }
 
 .logo img {
     height: 50px;       /* 固定高度 50px (導覽列高 70px，這樣會留白邊) */
     width: auto;        /* 寬度自動，保持圖片比例 */
     object-fit: contain;
+    display: block;      /* 消除圖片底部的預設間隙 */
 }
 
 .nav-links {
@@ -227,7 +232,14 @@ footer {
     .about-grid {
         grid-template-columns: 1fr;
     }
+    
+    .navbar .container {
+        padding: 10px;    /* 手機版兩側留白少一點 */
+    }
 
+    .logo img {
+        height: 35px;     /* [新增] 手機版 Logo 縮小一點，避免太擠 */
+    }
 }
 /* --- 以下是新增的 Portfolio 頁面樣式 --- */
 
@@ -329,5 +341,6 @@ footer {
     color: var(--accent-color);
     font-weight: bold;
 }
+
 
 
